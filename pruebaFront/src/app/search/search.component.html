@@ -1,0 +1,20 @@
+<div>
+    <label for="food">Buscar receta:</label>
+    <input type="text" id="food" name="food" [(ngModel)]="searchTerm" (ngModelChange)="search()" >
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Graduacion</th>
+        <th>Eslogan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of filteredData">
+        <td>{{ item.name }}</td>
+        <td>{{ item.abv }}</td>
+        <td>{{ item.tagline }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
